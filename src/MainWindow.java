@@ -11,25 +11,35 @@ public class MainWindow {
         mainFrame.setLocationRelativeTo(null);
 
         // create GUI controls to add to JFrame
-        JPanel displayPanel = new JPanel(); // display Panel
-        displayPanel.setSize(610, 150);
-        displayPanel.setLocation(235, 10);
-        displayPanel.setBorder(BorderFactory.createLineBorder(Color.MAGENTA, 3));
 
+        JLabel infoLabel = new JLabel("Info");
+        infoLabel.setFont(infoLabel.getFont().deriveFont(30.0f));
+        infoLabel.setSize(280, 80);
+        infoLabel.setLocation(400, 175);
 
-
-
+        JLabel favLabel = new JLabel("Favourite");
+        favLabel.setFont(favLabel.getFont().deriveFont(30.0f));
 
         JButton addButton = new JButton("Add");
+        addButton.setBackground(Color.CYAN.darker());
+        addButton.setBorder(BorderFactory.createLineBorder(Color.MAGENTA, 1));
         addButton.setFocusable(false);
         addButton.setSize(100, 50);
         addButton.setLocation(490, 640);
 
+        ImageIcon sakura = new ImageIcon("src/image/giphy.gif");
+        JLabel sakuraLabel = new JLabel();
+        sakuraLabel.setIcon(sakura);
+        sakuraLabel.setSize(400, 480);
+        sakuraLabel.setLocation(0,0);
         // add controls to JFrame
         mainFrame.add(addButton);
-        mainFrame.add(displayPanel);
+        mainFrame.add(new DisplayPanel());
         mainFrame.add(new InfoPanel());
         mainFrame.add(new FavouritePanel());
+        mainFrame.add(infoLabel);
+        mainFrame.add(favLabel);
+        mainFrame.add(sakuraLabel);
 
         // make JFrame appear on the screen
         mainFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
