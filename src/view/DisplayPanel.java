@@ -1,3 +1,5 @@
+package view;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -5,7 +7,7 @@ public class DisplayPanel extends JPanel{
 
     public DisplayPanel() {
 
-        setSize(610, 150);
+        setSize(610, 120);
         setLocation(235, 10);
         setBorder(BorderFactory.createLineBorder(Color.MAGENTA, 3));
 

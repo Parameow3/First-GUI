@@ -1,3 +1,5 @@
+package view;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -16,7 +18,7 @@ public class InfoPanel extends JPanel {
             maleRB.setIcon(radio);
             maleRB.setSelectedIcon(radioChecked);
             maleRB.setFont(maleRB.getFont().deriveFont(32.0f));
-            maleRB.setSize(280, 80);
+            maleRB.setSize(140, 80);
             maleRB.setLocation(10, 5);
             maleRB.setFocusable(false);
 
@@ -51,6 +53,15 @@ public class InfoPanel extends JPanel {
             teedRB.setSize(280, 80);
             teedRB.setLocation(10, 340);
             teedRB.setFocusable(false);
+
+            ButtonGroup genderGroup = new ButtonGroup();
+            genderGroup.add(maleRB);
+            genderGroup.add(femaleRB);
+
+            ButtonGroup departmentGroup = new ButtonGroup();
+            departmentGroup.add(bedRB);
+            departmentGroup.add(iteRB);
+            departmentGroup.add(teedRB);
 
             add(maleRB);
             add(femaleRB);
